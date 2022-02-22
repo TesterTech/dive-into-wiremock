@@ -1,5 +1,7 @@
 # dive-into-wiremock
-Code for the YouTube video: https://youtu.be/0fyGWhGN6y8
+Code for the YouTube videos:
+- Part 1: https://youtu.be/0fyGWhGN6y8 
+- Part 2: https://www.youtube.com/watch?v=hUv2rpqd3KU
 
 ## Getting started with WireMock
 The easiest way is to run the JAR from command-line. To do that look at the WireMock docs under standalone (http://wiremock.org/docs/running-standalone/) and download the JAR file. Now from terminal (command-line) run the JAR file using the ```java -jar``` argument, for example ```java -jar wiremock-jre8-standalone-2.31.0.jar```.
@@ -7,6 +9,12 @@ The easiest way is to run the JAR from command-line. To do that look at the Wire
 You should see an ascii logo of WireMock and an indication of the port it's running at. 
 
 Now you can interact with it using curl of a rest-client. The rest-client I'm using in the video is Insomnia REST client but you can use any other client. 
+
+## Docker
+```docker pull wiremock/wiremock```
+```docker run -it --rm -p 8080:8080 wiremock/wiremock```
+Note: depending on your setup, you might want to call wiremock with sudo (like also in the video). 
+
 
 ## Add new mappings
 
@@ -49,3 +57,6 @@ You can also put the above snippet in the mappings dir.
 ## References
 - WireMock http://wiremock.org
 - Insomnia Rest client https://insomnia.rest 
+- Wiremock on Docker Hub https://hub.docker.com/r/wiremock/wiremock
+
+
