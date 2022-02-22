@@ -49,6 +49,17 @@ You can also put the above snippet in the mappings dir.
     }
 }
 ```
+
+## Running Wiremock and recoding 
+In part 2 video I show an example of the recorder where I show behavior that is not expected https://youtu.be/hUv2rpqd3KU?t=461 ... Later I saw that using the command as shown below indeed works as expected. 
+```
+java -jar wiremock-jre8-standalone-2.31.0.jar --port 8080 \
+  --proxy-all="http://example.mocklab.io" \
+  --record-mappings \ 
+  --verbose 
+```
+So use above command if you want to have rec and play. 
+
 ## Demo app 
 - The demo app is based on the tutorial 
 - https://github.com/miguelgrinberg/microblog/
@@ -57,6 +68,8 @@ You can also put the above snippet in the mappings dir.
 ## References
 - WireMock http://wiremock.org
 - Insomnia Rest client https://insomnia.rest 
-- Wiremock on Docker Hub https://hub.docker.com/r/wiremock/wiremock
+- WireMock on Docker Hub https://hub.docker.com/r/wiremock/wiremock
+- WireMock rec & play at the same time https://stackoverflow.com/questions/40743569/can-wiremock-play-and-record-be-used-at-the-same-time
+-
 
 
